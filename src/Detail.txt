@@ -1,0 +1,44 @@
+เรื่องราวของโค้ดนี้มาจากการ์ตูนสมัยเด็กที่พระเอกมีชื่อเท่ๆเช่น JohnSmith และไม่เคยแพ้ ถ้าหากพระเอกใกล้แพ้ จะมีเพลงOPหล่อๆเท่ๆจะเริ่มดังขึ่นมา
+และพระเอกจะมีพลังฮึดต่อสู้จนชนะในท้ายที่สุด(แถวบ้านเรียกสกิลพระเอก)
+โค้ดนี้จะมีตัวละครชื่อ JohnSmith และ Monster 1ตัว ที่ต่อสู้กันจนกว่าจะมีฝ่ายใดฝ่ายหนึ่งแพ้(Hp=0)
+เริ่มต้นการต่อสู้ด้วยการไปตัวเปล่าๆก่อน  พอพระเอกเจ็บตัวจะเสกอุปกรณ์เทพๆมาใส่ 
+
+การต่อสู้ระหว่างตัวละครหลัก (JohnSmith) กับ Monster โดยมีการใช้ class และ method ดังนี้
+
+คลาส Hero:
+level: เลเวลของ Hero
+baseHp: ค่า HP ของHero
+baseDef: ค่า Def ของHero
+baseMana: ค่า Mana ของ Hero(ยังไม่มีการใช้เขียนไว้เท่ๆเฉยๆ)
+baseRunSpeed: ค่าความเร็วในการเคลื่อนที่ ของ Hero
+equippedSword: ข้อมูลของดาบที่ Hero กำลังใช้
+equippedShield: ข้อมูลของโล่ที่ Hero กำลังใช้
+
+Method
+equipSword(Sword sword): ใช้ในการติดตั้งดาบให้กับ Hero
+equipShield(Shield shield): ใช้ในการติดตั้งโล่ให้กับ Hero
+PVP(Monster monster): ใช้ในการต่อสู้กับmonster (PvP)
+CalculateAtk(): คำนวณAtkทั้งหมดของ Hero
+updateStats(): อัพเดทค่าสเตตัสของ Hero เมื่อมีการติดตั้งอุปกรณ์
+DmgTaken : คำนวณและลด HP ของ Hero จากความเสียหายที่ได้รับ
+printStats(): แสดงข้อมูลสเตตัสปัจจุบันของ Hero
+
+คลาส Monster:
+monsterLv: เลเวลของ monster
+monsterHp: ค่า HP ของmonster
+Method
+CalculateAtk(): คำนวณค่าAtkของmonster
+DmgTaken(double damage): คำนวณและลด HP ของmonsterจากความเสียหายที่ได้รับ
+printMonsterStats(): แสดงข้อมูลสถิติของmonster
+
+คลาส Sword:
+baseAtk: ค่าAtkของดาบ
+runSpeedDecrease: ลดความเร็วในการวิ่งของ Hero เมื่อใช้ดาบ
+
+คลาส Shield:
+baseDef: ค่าDefของโล่
+runSpeedDecrease: ลดความเร็วในการวิ่งของ Hero เมื่อใช้โล่
+
+
+
+
