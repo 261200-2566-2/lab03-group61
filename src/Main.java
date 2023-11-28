@@ -181,6 +181,7 @@ class Monster {
         System.out.println("Monster   Lv: " + monsterLv + " | Atk: " + CalculateAtk() + " | HP: " + monsterHp + " |");
     }
 
+
     public double getMonsterHp() {
         return monsterHp;
     }
